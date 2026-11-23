@@ -11,10 +11,21 @@ type LetterFormProps = {
     onSubmitLetter: (letter: LetterData) => void;
 };
 
+
+const getToday = (): string => {
+    const today = new Date();
+
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+};
+
 export function LetterForm({ onSubmitLetter }: LetterFormProps) {
 
     const [letter, setLetter] = useState<LetterData>({
-        date: new Date().toLocaleDateString("en-CA"),
+        date: getToday(),
         yourRef: "",
         ourRef: "",
     });
@@ -31,7 +42,6 @@ export function LetterForm({ onSubmitLetter }: LetterFormProps) {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         onSubmitLetter(letter);
     };
 

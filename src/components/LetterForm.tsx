@@ -7,7 +7,6 @@ type LetterFormProps = {
 };
 
 export function LetterForm({ letter, onLetterChange }: LetterFormProps) {
-
     const handleChange = (field: keyof LetterData, value: string) => {
         onLetterChange({
             ...letter,
@@ -17,7 +16,6 @@ export function LetterForm({ letter, onLetterChange }: LetterFormProps) {
 
     return (
         <form onSubmit={(e) => e.preventDefault()}>
-
             <div>
                 <label htmlFor="date">Date</label>
                 <input
@@ -51,6 +49,17 @@ export function LetterForm({ letter, onLetterChange }: LetterFormProps) {
                 />
             </div>
 
+            <div>
+                <label htmlFor="content">Correspondence Content</label>
+                <textarea
+                    id="content"
+                    rows={10}
+                    placeholder="Write the body of your letter here..."
+                    value={letter.content}
+                    onChange={(e) => handleChange("content", e.currentTarget.value)}
+                    className="mt-2 w-full rounded-md border border-stone-300 bg-white p-3 text-sm leading-6 outline-none focus:border-[#103B66] focus:ring-2 focus:ring-[#103B66]/10"
+                />
+            </div>
         </form>
     );
 }

@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 * {
@@ -7,22 +8,36 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #1f2937;
+    color: #263442;
+    background: #F8FAFC;
 }
 
-input {
+input,
+textarea {
     display: block;
     width: 100%;
     margin-top: 8px;
     padding: 12px;
-    border: 1px solid #d6d3d1;
+    border: 1px solid #C5D1DC;
     border-radius: 6px;
-    outline: none;
+    background: #FFFFFF;
+    color: #263442;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-input:focus {
-    border-color: #047857;
-    box-shadow: 0 0 0 2px rgb(4 120 87 / 10%);
+input::placeholder,
+textarea::placeholder {
+    color: #8A9BAA;
+    opacity: 1;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #103B66;
+    box-shadow: 0 0 0 3px rgb(16 59 102 / 10%);
+    outline: none;
 }
 
 form {
@@ -42,27 +57,47 @@ form button {
     padding: 13px 20px;
     border: none;
     border-radius: 6px;
-    background: #14532d;
+    background: #103B66;
     color: white;
     font-weight: 600;
     cursor: pointer;
 }
 
 form button:hover {
-    background: #166534;
+    background: #071D36;
+}
+
+/* A4 document printing */
+@page {
+    size: A4;
+    margin: 20mm;
 }
 
 @media print {
     body {
-        background: white;
+        background: white !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .letter-paper,
+    .letter-paper * {
+        visibility: visible;
     }
 
     .letter-paper {
-        width: 210mm;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
         max-width: none;
-        min-height: 297mm;
+        min-height: 0;
+        padding: 0;
         margin: 0;
-        padding: 20mm;
-        box-shadow: none;
+        background: white !important;
+        box-shadow: none !important;
+        color: black !important;
     }
 }

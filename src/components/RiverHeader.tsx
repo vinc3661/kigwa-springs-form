@@ -25,7 +25,7 @@ export function RiverHeader() {
         <div className="mt-5 space-y-2 text-sm text-white/95">
           <p>P.O. BOX 2375-00900, KIAMBU, KENYA, E.A.</p>
           <p>Tel: +254 101 628 200</p>
-          <p>Email: pmkinuthia3@yahoo.com</p>
+          <p>kigwaspringslimited@gmail.com</p>
         </div>
 
         <p className="mt-4 text-xs uppercase tracking-[0.25em] text-white/90">

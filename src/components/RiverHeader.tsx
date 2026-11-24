@@ -19,7 +19,7 @@ export function RiverHeader() {
 
       <div className="relative z-10 flex h-full flex-col justify-center px-8 md:px-16">
         <h1 className="text-4xl font-bold tracking-[0.2em]">
-          KIGWA SPRING LIMITED
+          KIGWA SPRINGS LIMITED
         </h1>
 
         <div className="mt-5 space-y-2 text-sm text-white/95">

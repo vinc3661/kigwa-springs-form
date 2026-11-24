@@ -16,7 +16,7 @@ export function LetterPreview({ letter }: LetterPreviewProps) {
         <article className="letter-paper w-full text-[#263442]">
             <header className="border-b-2 border-[#8A9BAA] pb-5">
                 <h1 className="text-3xl font-bold tracking-[0.18em] text-[#103B66]">
-                    KIGWA SPRINGS
+                    KIGWA SPRINGS LIMITED
                 </h1>
 
                 <div className="mt-3 space-y-1 text-xs text-gray-600">

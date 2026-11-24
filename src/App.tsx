@@ -31,9 +31,7 @@ function App() {
             <main className="mx-auto grid max-w-7xl gap-10 p-6 lg:grid-cols-2 lg:gap-12 lg:p-10">
                 <section className="min-w-0 p-2 print:hidden">
                     <div className="mb-7 border-b border-[#D5DEE6] pb-4">
-                        <p className="mb-1 text-xs font-semibold tracking-[0.2em] text-[#8A9BAA]">
-                            SECTION 01
-                        </p>
+                       
                         <h2 className="text-lg font-bold tracking-[0.1em] text-[#103B66]">
                             LETTER DETAILS
                         </h2>
@@ -50,9 +48,7 @@ function App() {
 
                 <section className="min-w-0 p-2">
                     <div className="mb-7 border-b border-[#D5DEE6] pb-4 print:hidden">
-                        <p className="mb-1 text-xs font-semibold tracking-[0.2em] text-[#8A9BAA]">
-                            SECTION 02
-                        </p>
+                       
                         <h2 className="text-lg font-bold tracking-[0.1em] text-[#103B66]">
                             DOCUMENT PREVIEW
                         </h2>

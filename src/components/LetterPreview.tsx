@@ -1,11 +1,13 @@
 
+import type { Ref } from "react";
 import type { LetterData } from "../types/letter";
 
 type LetterPreviewProps = {
     letter: LetterData;
+    previewRef: Ref<HTMLElement>;
 };
 
-export function LetterPreview({ letter }: LetterPreviewProps) {
+export function LetterPreview({ letter, previewRef }: LetterPreviewProps) {
     const formattedDate = letter.date
         ? new Intl.DateTimeFormat("en-KE", {
               dateStyle: "long",
@@ -13,7 +15,10 @@ export function LetterPreview({ letter }: LetterPreviewProps) {
         : "—";
 
     return (
-        <article className="letter-paper w-full text-[#263442]">
+        <article
+            ref={previewRef}
+            className="letter-paper w-full text-[#263442]"
+        >
             <header className="border-b-2 border-[#8A9BAA] pb-5">
                 <h1 className="text-3xl font-bold tracking-[0.18em] text-[#103B66]">
                     KIGWA SPRINGS LIMITED
@@ -57,7 +62,7 @@ export function LetterPreview({ letter }: LetterPreviewProps) {
                 <div className="mt-10">
                     <p>Yours faithfully,</p>
                     <p className="mt-8 font-semibold">
-                        For Kigwa Spring Limited
+                        For Kigwa Springs Limited
                     </p>
                 </div>
             </div>

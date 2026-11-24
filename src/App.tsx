@@ -55,27 +55,29 @@ function App() {
                         </p>
                     </div>
 
-                    <div className="mb-5 flex items-center justify-between gap-4 print:hidden">
-                        <div className="text-sm">
-                            <span className="text-[#64748B]">
-                                Correspondence enquiries:{" "}
-                            </span>
-                            <a
-                                href="mailto:kigwaspringslimited@gmail.com"
-                                className="font-medium text-[#103B66] underline decoration-[#8A9BAA] underline-offset-4 transition-colors hover:text-[#071D36]"
-                            >
-                                kigwaspringslimited@gmail.com
-                            </a>
-                        </div>
+<div className="mb-5 flex min-w-0 flex-col gap-4 print:hidden sm:flex-row sm:items-center sm:justify-between">
+    <div className="min-w-0 text-sm">
+        <span className="text-[#64748B]">
+            Correspondence enquiries:{" "}
+        </span>
 
-                        <button
-                            type="button"
-                            onClick={() => window.print()}
-                            className="shrink-0 rounded-xl border border-[#D5DEE6] bg-gradient-to-br from-[#E5EAF0] to-[#D5DEE6] px-6 py-3 text-sm font-semibold tracking-wide text-[#103B66] shadow-[5px_5px_12px_#c5ced8,-5px_-5px_12px_#f0f3f6] transition-all duration-300 hover:shadow-[2px_2px_6px_#c5ced8,-2px_-2px_6px_#f0f3f6] active:shadow-inner"
-                        >
-                            Print / Save as PDF
-                        </button>
-                    </div>
+        <a
+            href="mailto:kigwaspringslimited@gmail.com"
+            className="break-all font-medium text-[#103B66] underline decoration-[#8A9BAA] underline-offset-4 transition-colors hover:text-[#071D36]"
+        >
+            kigwaspringslimited@gmail.com
+        </a>
+    </div>
+
+    <button
+        type="button"
+        onClick={() => window.print()}
+        className="w-full rounded-xl border border-[#D5DEE6] bg-gradient-to-br from-[#E5EAF0] to-[#D5DEE6] px-6 py-3 text-sm font-semibold tracking-wide text-[#103B66] shadow-[5px_5px_12px_#c5ced8,-5px_-5px_12px_#f0f3f6] transition-all duration-300 hover:shadow-[2px_2px_6px_#c5ced8,-2px_-2px_6px_#f0f3f6] active:shadow-inner sm:w-auto sm:shrink-0"
+    >
+        Print / Save as PDF
+    </button>
+</div>
+
 
                     <LetterPreview letter={letter} />
                 </section>

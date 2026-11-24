@@ -60,8 +60,11 @@ function App() {
                             Review your generated letter
                         </p>
                     </div>
-
+<a href="mailto:kigwaspringslimited@gmail.com">
+    kigwaspringslimited@gmail.com
+</a>
                     <div className="mb-5 flex justify-end print:hidden">
+                    
       
 <button
     type="button"

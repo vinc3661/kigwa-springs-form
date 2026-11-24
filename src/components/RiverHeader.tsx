@@ -2,16 +2,17 @@
 export function RiverHeader() {
   return (
     <header className="relative h-[420px] overflow-hidden bg-[#10231e] text-white">
-
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/river.mp4" type="video/mp4" />
-      </video>
+<video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="none"
+    poster="/river-poster.jpg"
+    className="absolute inset-0 h-full w-full object-cover"
+>
+    <source src="/river.mp4" type="video/mp4" />
+</video>
 
       
       <div className="absolute inset-0 bg-gradient-to-r from-[#103B66]/75 via-[#103B66]/45 to-[#8A9BAA]/25" />
